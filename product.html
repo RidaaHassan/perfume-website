@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Product | AURA HAUTE PARFUMERIE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="productPageBody">
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="logo-container">
+      <div class="brand-crest">✦</div>
+      <a href="index.html" class="brand-title">AURA</a>
+      <span class="brand-sub">HAUTE PARFUMERIE</span>
+    </div>
+    <nav class="nav-links">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="product.html" class="nav-link active">Product</a>
+      <a href="order.html" class="nav-link">Order</a>
+    </nav>
+  </header>
+
+  <!-- Main Product Section -->
+  <main class="product-page container">
+    <div class="product-layout">
+      
+      <!-- Gallery Display with Cursor Zoom & Slider -->
+      <div class="product-visual">
+        <div class="gallery-container">
+          
+          <!-- Vertical/Horizontal Adaptive Thumbnails -->
+          <div class="gallery-thumbnails">
+            <button class="thumb-btn active" data-img="amber-oud.webp">
+              <img src="amber-oud.webp" alt="Amber Oud View">
+            </button>
+            <button class="thumb-btn" data-img="musc-gold.webp">
+              <img src="musc-gold.webp" alt="Musc Gold View">
+            </button>
+            <button class="thumb-btn" data-img="night-iris.webp">
+              <img src="night-iris.webp" alt="Night Iris View">
+            </button>
+            <button class="thumb-btn" data-img="rose-bloom.webp">
+              <img src="rose-bloom.webp" alt="Rose Bloom View">
+            </button>
+            <button class="thumb-btn" data-img="sage-citrus.webp">
+              <img src="sage-citrus.webp" alt="Sage Citrus View">
+            </button>
+          </div>
+
+          <!-- Main Viewport -->
+          <div class="main-image-viewport" id="imageViewport">
+            <button class="slide-btn prev-btn" id="prevSlideBtn">❮</button>
+            
+            <div class="zoom-image-wrapper" id="zoomWrapper">
+              <img id="perfumeImage" src="amber-oud.webp" alt="AURA Flacon Main View">
+              <div id="engravingPreview" class="engraving-overlay"></div>
+            </div>
+
+            <button class="slide-btn next-btn" id="nextSlideBtn">❯</button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Scent Customizer Form -->
+      <div class="product-details">
+        <span class="gold-subtitle">EXTRAIT DE PARFUM (100 ML)</span>
+        <h1 class="product-title" id="scentTitle">Amber Oud</h1>
+        <div class="price-tag" id="scentPrice">$340</div>
+        
+        <p class="scent-description" id="scentDesc">
+          Smoked Cognac & Agarwood. Rich resinous warmth blended with velvety amber and aged dark agarwood.
+        </p>
+
+        <div class="divider"></div>
+
+        <!-- Scent Selector Options -->
+        <div class="scent-selection-group">
+          <label class="input-label">SELECT YOUR SCENT FLAVOR</label>
+          <div class="scent-options-grid">
+            
+            <button class="scent-card active zoom-hover" data-scent="amber-oud" data-name="Amber Oud" data-price="340" data-img="amber-oud.webp" data-desc="Smoked Cognac & Agarwood. Rich resinous warmth blended with velvety amber and aged dark agarwood." data-color="#B88E63">
+              <span class="scent-color-indicator" style="background: #A0522D;"></span>
+              <span class="scent-card-title">Amber Oud</span>
+            </button>
+
+            <button class="scent-card zoom-hover" data-scent="musc-gold" data-name="Musc Gold" data-price="350" data-img="musc-gold.webp" data-desc="Imperial Vanilla & Pure Honey Musc. Sun-drenched golden amber infused with creamy Madagascar vanilla." data-color="#DAA520">
+              <span class="scent-color-indicator" style="background: #DAA520;"></span>
+              <span class="scent-card-title">Musc Gold</span>
+            </button>
+
+            <button class="scent-card zoom-hover" data-scent="night-iris" data-name="Night Iris" data-price="365" data-img="night-iris.webp" data-desc="Black Amber & Royal Violet Iris. Mysterious midnight blooms intertwined with smoky lavender and rare iris root." data-color="#6A0DAD">
+              <span class="scent-color-indicator" style="background: #6A0DAD;"></span>
+              <span class="scent-card-title">Night Iris</span>
+            </button>
+
+            <button class="scent-card zoom-hover" data-scent="rose-bloom" data-name="Rose Bloom" data-price="330" data-img="rose-bloom.webp" data-desc="Royal Rose & Damascena Dew. Soft crimson rose petals steeped in sweet nectar and warm wood accord." data-color="#C71585">
+              <span class="scent-color-indicator" style="background: #C71585;"></span>
+              <span class="scent-card-title">Rose Bloom</span>
+            </button>
+
+            <button class="scent-card zoom-hover" data-scent="sage-citrus" data-name="Sage Citrus" data-price="320" data-img="sage-citrus.webp" data-desc="Crisp Bergamot & Wild Sage. Vibrant citrus zest grounded by earthy sage leaves and fresh amber wood." data-color="#556B2F">
+              <span class="scent-color-indicator" style="background: #556B2F;"></span>
+              <span class="scent-card-title">Sage Citrus</span>
+            </button>
+
+          </div>
+        </div>
+
+        <!-- Engraving Customizer -->
+        <div class="customization-group">
+          <label class="input-label" for="engravingInput">BESPOKE GLASS ENGRAVING (OPTIONAL)</label>
+          <input type="text" id="engravingInput" maxlength="12" placeholder="e.g. A.R. 1924" class="custom-input">
+        </div>
+
+        <!-- Quantity & Order CTA -->
+        <div class="action-group">
+          <div class="quantity-selector">
+            <button id="qtyMinus" class="qty-btn">-</button>
+            <span id="qtyVal">1</span>
+            <button id="qtyPlus" class="qty-btn">+</button>
+          </div>
+          <button id="addToOrderBtn" class="btn btn-primary add-to-cart-btn zoom-hover">
+            Acquire Scent & Proceed
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>© 2026 AURA HAUTE PARFUMERIE PARIS. ALL RIGHTS RESERVED.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
